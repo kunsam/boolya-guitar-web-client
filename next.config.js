@@ -1,8 +1,8 @@
 
 
-import withCSS from '@zeit/next-css';
-import withLess from '@zeit/next-sass';
-import withTypescript from '@zeit/next-typescript';
+const withCSS = require('@zeit/next-css');
+const withLess = require('@zeit/next-sass');
+const withTypescript = require('@zeit/next-typescript');
 
 export default withCSS(withLess(withTypescript({
   webpack(config, options) {
