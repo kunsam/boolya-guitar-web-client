@@ -17,7 +17,7 @@ import {
 } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { withRouter } from 'next/router'
-import GuitarSVG from '../../../static/picture/guitar.svg'
+import GuitarSVG from '../../../static/picture/guitar1.svg'
 import PlaySVG from '../../../static/picture/play.svg'
 
 import Icon from '@material-ui/core/Icon';
