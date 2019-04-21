@@ -37,12 +37,12 @@ export class About extends Component<any, any> {
         <AppBar position="static">
           <Toolbar>
             <IconButton className={classes.menuButton} color="inherit" aria-label="Menu">
-                <MenuIcon />
-              </IconButton>
-              <Typography variant="h6" color="inherit" className={classes.grow}>
-                News
-              </Typography>
-              <Button color="inherit">Login</Button>
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" color="inherit" className={classes.grow}>
+              News
+            </Typography>
+            <Button color="inherit">Login</Button>
           </Toolbar>
         </AppBar>
       </div>
@@ -51,4 +51,6 @@ export class About extends Component<any, any> {
 }
 
 
-export default withStyles(styles)(WithApolloClient(About, apolloClientInstance)) ;
+export default withStyles(styles)(
+  WithApolloClient(About, apolloClientInstance)
+) ;

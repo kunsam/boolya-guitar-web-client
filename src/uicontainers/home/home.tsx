@@ -16,7 +16,7 @@ import {
   withStyles,
 } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
-
+import { withRouter } from 'next/router'
 import GuitarSVG from '../../../static/picture/guitar.svg'
 import PlaySVG from '../../../static/picture/play.svg'
 
@@ -62,6 +62,7 @@ export class HomeContainer extends Component<any, any> {
         justify="center"
         alignItems="center"
         className={classes.grid}
+        style={{ height: '100vh'}}
       >
         <Grid item xs={12} className={classes.input}>
           {/* <div>
@@ -103,6 +104,9 @@ export class HomeContainer extends Component<any, any> {
               color="secondary"
               classes={classes.button}
               className="search-music-standard-button"
+              onClick={() => {
+                this.props.router.push('/scores')
+              }}
             >
               Play
               <PlaySVG className='search-music-standard-button-svg' />
@@ -115,4 +119,6 @@ export class HomeContainer extends Component<any, any> {
 }
 
 
-export default withStyles(styles)(HomeContainer);
+export default withStyles(styles)(
+  withRouter(HomeContainer)
+);

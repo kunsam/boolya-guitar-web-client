@@ -24,7 +24,7 @@ const styles = (theme: Theme) => createStyles({
 export class MainAppLayout extends Component<any, any> {
   render() {
     return (
-      <div style={{ height: '100vh' }}>
+      <div>
         <Head>
           {/* <script src={`/static/js/viewport.js`}></script> */}
           <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" />
