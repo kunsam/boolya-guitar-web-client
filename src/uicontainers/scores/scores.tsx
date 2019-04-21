@@ -7,10 +7,12 @@ import ScoresReader from '../../components/scoresreader';
 import ScoresInfoPanel from './scoresinfopanel';
 
 import Paper from '@material-ui/core/Paper';
+import { compose, graphql } from 'react-apollo';
+import { QueryAbout } from '../../graphql/about';
 
 
 
-export default class ScoresContainer extends Component {
+ class ScoresContainer extends Component {
 
   render() {
     return (
@@ -35,3 +37,12 @@ export default class ScoresContainer extends Component {
     )
   }
 }
+
+export default compose(
+  graphql(QueryAbout, {
+    props: (props: any) => {
+      console.log(props, props.data.error, 'propspropsprops')
+      return props;
+    }
+  })
+)(ScoresContainer)
