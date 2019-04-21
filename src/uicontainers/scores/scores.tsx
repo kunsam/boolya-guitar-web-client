@@ -12,9 +12,10 @@ import { QueryAbout } from '../../graphql/about';
 
 
 
- class ScoresContainer extends Component {
+ class ScoresContainer extends Component<any, any> {
 
   render() {
+    console.log(this.props, 'containercontainer')
     return (
       <AppbarLayout>
         <Grid container justify="flex-start" spacing={0}>
@@ -28,7 +29,7 @@ import { QueryAbout } from '../../graphql/about';
 
           <Grid item xs={4}>
             <Paper  style={{ marginRight: 5, height: 400 }}>
-              <ScoresInfoPanel />
+              <ScoresInfoPanel data={this.props.data.aboutBoya} />
             </Paper>
           </Grid>
           
