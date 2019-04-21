@@ -15,6 +15,7 @@
     "noImplicitAny": false,
     "noImplicitReturns": true,
     "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
   "include": [
     "./src/**/*",

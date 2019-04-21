@@ -1,0 +1,23 @@
+
+
+.search-music-input-label{
+  .guitar-svg{
+    // position: absolute;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+  }
+  span{
+    margin-left: 5px;
+  }
+}
+
+.search-music-standard-button{
+  background-image: linear-gradient(to right, #aa6b53, #683323);
+
+  .search-music-standard-button-svg{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+}
