@@ -8,26 +8,51 @@ import Divider from '@material-ui/core/Divider';
 
 
 
-export default class ScoresReader extends Component {
+export default class ScoresReader extends Component<any, any> {
+
+  constructor(props: any) {
+    super(props);
+    this.state = {
+      isFullScreen: false
+    }
+  }
 
   render() {
+
+    const { score } = this.props;
+    const {
+      id,
+      level,
+      title,
+      images,
+      likeCount,
+      description,
+    } = score;
+
+
     return (
-      <div className="ScoresReader">
+      <div className="ScoresReader" >
         <Grid
           container
           direction="row"
           alignItems="center"
           justify="flex-end" className="scores-reader-control-panel">
           <Grid item xs={2} style={{ textAlign: 'center' }}>
-            <Typography>控制器层</Typography>
+            <Typography variant="body2">控制器层</Typography>
           </Grid>
           <Grid item xs={10} style={{ textAlign: 'right' }}>
-            <IconButton >
+            <IconButton onClick={() => {
+              this.setState({ isFullScreen: true })
+            }}>
               <OpenWithIcon />
             </IconButton>
           </Grid>
         </Grid>
         <Divider />
+
+        {
+          images.map(({ id, url }) => <img key={id} src={url} style={{ width: '100%' }} />)
+        }
       </div>
     )
   }

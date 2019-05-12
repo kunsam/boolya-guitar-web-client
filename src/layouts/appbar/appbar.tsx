@@ -82,7 +82,7 @@ class AppbarLayout extends Component<any, any> {
         <CssBaseline />
         <div style={{ width: '100%' }}>
           <AppBar
-            position="fixed" style={{ background: 'transparent', height: 64 }}>
+            position="fixed" style={{ backgroundImage: 'linear-gradient(to right, #e3b686, #e6b58f, #db9667)', height: 64 }}>
             <Toolbar>
               <IconButton
                 color="inherit"

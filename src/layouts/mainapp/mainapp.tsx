@@ -1,6 +1,7 @@
 
-
+import "antd/dist/antd.css"; // put on cdn
 import './mainapp.scss'
+
 import Head from 'next/head'
 import NoSSR from 'react-no-ssr'
 import React, { Component } from 'react'
